@@ -1,6 +1,6 @@
 #include "Cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
 	_type = "Cat";
 	_catbrain = new Brain();
@@ -28,7 +28,7 @@ Cat &Cat::operator=(Cat const &Cat)
 
 void Cat::makeSound() const
 {
-	std::cout << "Mew!" << std::endl;
+	std::cout << "Mew!";
 }
 
 void Cat::setIdeas(std::string idea)

@@ -1,6 +1,6 @@
 #include "Dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog() : AAnimal()
 {
 	_type = "Dog";
 	_dogbrain = new Brain();
@@ -28,7 +28,7 @@ Dog &Dog::operator=(Dog const &Dog)
 
 void Dog::makeSound() const
 {
-	std::cout << "Voof!" << std::endl;
+	std::cout << "Voof!";
 }
 
 void Dog::setIdeas(std::string idea)

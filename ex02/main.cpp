@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
@@ -11,7 +11,8 @@ int main()
 {
 
 	// atexit(checkleaks);
-	Animal *animals[6];
+	AAnimal *animals[6];
+	// AAnimal animal;
 	for (int i = 0; i < 6; i++)
 	{
 		if (i % 2)
@@ -26,7 +27,10 @@ int main()
 		}
 	}
 	for (int i = 0; i < 6; i++)
-		std::cout << animals[i]->getType() << " is thinking of " <<  animals[i]->getIdeas(1) << std::endl;
+	{
+		animals[i]->makeSound();
+		std::cout << " is thinking of " <<  animals[i]->getIdeas(1) << std::endl;
+	}
 	for (int i = 0; i < 6; i++)
 		delete (animals[i]);
 	return 0; 
