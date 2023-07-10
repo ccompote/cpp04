@@ -6,13 +6,13 @@
 #    By: ccompote <ccompote@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/18 21:15:08 by ccompote          #+#    #+#              #
-#    Updated: 2023/07/06 15:25:41 by ccompote         ###   ########.fr        #
+#    Updated: 2023/07/08 18:10:49 by ccompote         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-SRCS =  main.cpp AMateria.cpp Cure.cpp Ice.cpp ICharacter.cpp
+SRCS =  main.cpp MateriaSource.cpp Cure.cpp Ice.cpp Character.cpp AMateria.cpp
 
 NAME =  three
 

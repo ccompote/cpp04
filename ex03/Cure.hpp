@@ -4,7 +4,7 @@
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Cure : AMateria
+class Cure : public AMateria
 {
 	public:
 
@@ -13,10 +13,9 @@ class Cure : AMateria
 		Cure &operator=(Cure const &);
 		~Cure();
 
-		Cure *clone() const;
-	private:
-
-		std::string _type;
+		AMateria *clone() const;
+		void use(ICharacter &target);
+		
 };
 
 #endif

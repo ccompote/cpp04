@@ -1,8 +1,7 @@
 #include "Ice.hpp"
 
-Ice::Ice() : AMateria()
+Ice::Ice() : AMateria("ice")
 {
-	_type = "ice";
 	// std::cout << "Default constructor of Ice is called" << std::endl;
 }
 
@@ -11,8 +10,9 @@ Ice::~Ice()
 	std::cout << "Destructor of Ice is called" << std::endl;
 }
 
-Ice::Ice(Ice const &Ice)
+Ice::Ice(Ice const &Ice) : AMateria("ice")
 {
+	_type = Ice._type;
 	// std::cout << "Copy constructor of Ice is called" << std::endl;
 	*this = Ice;
 }
@@ -24,13 +24,14 @@ Ice &Ice::operator=(Ice const &Ice)
 	return (*this);
 }
 
-Ice *Ice::clone() const
+AMateria *Ice::clone() const
 {
-	Ice *newice;
+	AMateria *newice = new Ice();
 	return (newice);
 }
 
-void use(ICharacter &target)
+void Ice::use(ICharacter &target)
 {
-	std::cout << "* shoots an ice bolt at " << ICharacter._getName() << " *" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
+

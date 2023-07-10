@@ -4,7 +4,7 @@
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Ice : AMateria
+class Ice : public AMateria
 {
 	public:
 
@@ -13,12 +13,9 @@ class Ice : AMateria
 		Ice &operator=(Ice const &);
 		~Ice();
 
-		Ice *clone() const;
+		AMateria *clone() const;
 		void use(ICharacter &target);
 
-	private:
-
-		std::string _type;
 };
 
 #endif
