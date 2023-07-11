@@ -23,6 +23,8 @@ Cat &Cat::operator=(Cat const &Cat)
 {
 	std::cout << "Copy assignment operator of Cat is called" << std::endl;
 	_type = Cat._type;
+	for (int i = 0; i < 100; i++)
+		_catbrain->ideas[i] = Cat._catbrain->ideas[i];
 	return (*this);
 }
 

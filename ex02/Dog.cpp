@@ -23,6 +23,8 @@ Dog &Dog::operator=(Dog const &Dog)
 {
 	std::cout << "Copy assignment operator of Dog is called" << std::endl;
 	_type = Dog._type;
+	for (int i = 0; i < 100; i++)
+		_dogbrain->ideas[i] = Dog._dogbrain->ideas[i];
 	return (*this);
 }
 

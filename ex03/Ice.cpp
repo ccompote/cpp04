@@ -7,7 +7,7 @@ Ice::Ice() : AMateria("ice")
 
 Ice::~Ice()
 {
-	std::cout << "Destructor of Ice is called" << std::endl;
+	// std::cout << "Destructor of Ice is called" << std::endl;
 }
 
 Ice::Ice(Ice const &Ice) : AMateria("ice")
@@ -21,13 +21,13 @@ Ice &Ice::operator=(Ice const &Ice)
 {
 	// std::cout << "Copy assignment operator of Ice is called" << std::endl;
 	_type = Ice._type;
+	_equipped = Ice.is_equipped();
 	return (*this);
 }
 
 AMateria *Ice::clone() const
 {
-	AMateria *newice = new Ice();
-	return (newice);
+	return (new Ice());
 }
 
 void Ice::use(ICharacter &target)

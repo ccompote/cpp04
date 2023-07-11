@@ -28,7 +28,7 @@ void MateriaSource::learnMateria(AMateria *m)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (!magic[i])
+		if (magic[i] == NULL)
 		{
 			magic[i] = m;
 			ix_mat = i;
@@ -39,18 +39,10 @@ void MateriaSource::learnMateria(AMateria *m)
 
 AMateria *MateriaSource::createMateria(std::string const & type)
 {
-	if (magic[ix_mat]->getType() == "ice" || magic[ix_mat]->getType() == "cure")
+	for (int i = 0; i < 4; i++)
 	{
-		AMateria *newone;
-		if (type == "ice")
-			newone = new Ice();
-		else if (type == "cure")
-			newone = new Cure();
-		else
-			return (0);
-		return (newone);
+		if (magic[i] != NULL && magic[i]->getType() == type)
+			return (magic[i]->clone());
 	}
-	else
-		return (NULL);
-	return NULL;
+	return (NULL);
 }
