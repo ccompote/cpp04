@@ -27,11 +27,20 @@ AMateria::AMateria(AMateria const &AMateria)
 
 AMateria &AMateria::operator=(AMateria const &AMateria)
 {
-	// std::cout << "Copy assignment operator of AMateria is called" << std::endl;
+	std::cout << "Copy assignment operator of AMateria is called" << std::endl;
 	if (this == &AMateria)
 		return (*this);
 	_type = AMateria._type;
 	return (*this);
+}
+
+AMateria *AMateria::operator=(AMateria *AMateria)
+{
+	std::cout << "Copy assignment operator of AMateria is called" << std::endl;
+	if (this == AMateria)
+		return (this);
+	// _type = AMateria._type;
+	return (this);
 }
 
 void	AMateria::use(ICharacter& target) 

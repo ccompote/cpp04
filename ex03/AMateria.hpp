@@ -21,6 +21,7 @@ class AMateria
 		AMateria(std::string const &type);
 		AMateria(AMateria const &);
 		AMateria &operator=(AMateria const &);
+		AMateria *operator=(AMateria *AMateria);
 		virtual ~AMateria();
 
 		std::string const &getType() const;

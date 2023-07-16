@@ -7,7 +7,7 @@
 class MateriaSource : public IMateriaSource
 {
 	private:
-		AMateria *magic[4];
+		AMateria **magic;
 		int			ix_mat;
 
 	public:
