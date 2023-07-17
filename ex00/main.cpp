@@ -23,9 +23,10 @@ int main()
 	std::cout << k->getType() << " " << std::endl; 
 	k->makeSound(); 
 	wrongmeta->makeSound();
-
+	const WrongCat *c = new WrongCat();
+	c->makeSound();
 	delete(k);
 	delete(wrongmeta);
-
+	delete(c);
 	return 0; 
 }

@@ -38,8 +38,8 @@ void    test1()
     Character* you = new Character("you");
     Character *bob = new Character();
     AMateria* mat;
-    src->learnMateria(new Ice());
-    src->learnMateria(new Cure());
+    // src->learnMateria(new Ice());
+    // src->learnMateria(new Cure());
     mat = src->createMateria("ice");
 	me->equip(mat);
 	mat = src->createMateria("cure");
@@ -70,7 +70,7 @@ void    test1()
 int main(void)
 {
     atexit(checkleaks);
-    subjectTest();
+    // subjectTest();
     test1();
     return 0;
 }

@@ -18,8 +18,10 @@ Brain::Brain(Brain const &Brain)
 
 Brain &Brain::operator=(Brain const &Brain)
 {
-	for (int i = 0; i < 100; i++)
-		ideas[i] = Brain.ideas[i];
 	std::cout << "Copy assignment operator of Brain is called" << std::endl;
+	for (int i = 0; i < 100; i++)
+	{
+		ideas[i] = Brain.ideas[i];
+	}
 	return (*this);
 }
